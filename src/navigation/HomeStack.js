@@ -1,0 +1,17 @@
+import React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// Import layar yang baru dibuat
+import HomeScreen from '../screens/home/HomeScreen';
+import ProductDetailScreen from '../screens/home/ProductDetailScreen';
+
+const Stack = createNativeStackNavigator();
+
+export default function HomeStack() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="HomeMain" component={HomeScreen} />
+      <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
+    </Stack.Navigator>
+  );
+}
